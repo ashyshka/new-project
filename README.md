@@ -1,6 +1,28 @@
 create README.md
 
-Step by step manual to reproducing all actions
+# Actions:
+
+```
+gh auth login
+gh repo create new-project --public
+mkdir new-project
+cd new-project
+git init
+git remote add origin git@github.com:ashyshka/new-project.git
+echo "create README.md" > README.md
+git add README.md
+git commit -m "init"
+git checkout -b development
+code README.md
+git add README.md
+git status
+git commit -m "Added manual to reproduce to README.md"
+git checkout main
+git merge development
+git push --set-upstream origin main
+```
+
+# Explain: step by step manual to reproducing all actions
 
 Doing auth to the GitHub ( password auth was deprecated at the 2021 )
 ```
